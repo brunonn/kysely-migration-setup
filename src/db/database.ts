@@ -12,7 +12,7 @@ interface BaseTable {
   id: Generated<string>;
   created_at: ColumnType<Date, string | undefined, never>;
   updated_at: ColumnType<Date, string | undefined, never>;
-  deleted_at: ColumnType<Date, string | undefined, Date>;
+  deleted_at: ColumnType<Date | null, string | undefined, Date>;
 }
 
 export interface UsersTable extends BaseTable {
